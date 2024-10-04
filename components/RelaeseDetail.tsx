@@ -9,8 +9,6 @@ type Props = {
 const ReleaseDetail = ({ release }: Props) => {
   const { setCurrentTrackId } = useContext(TrackContext);
 
-  console.log(release);
-
   return (
     <div>
       <h2>

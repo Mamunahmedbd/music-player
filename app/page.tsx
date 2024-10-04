@@ -1,4 +1,3 @@
-"use client";
 import MusicPlayer from "@/components/MusicPlayer";
 import Link from "next/link";
 import React from "react";

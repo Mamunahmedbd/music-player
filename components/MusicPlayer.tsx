@@ -1,3 +1,4 @@
+"use client";
 import React, { useState, useEffect } from "react";
 import whiteLogo from "@/assets/logo.png";
 import { IoReturnUpBackSharp } from "react-icons/io5";
@@ -32,11 +33,6 @@ const MusicPlayer = () => {
       setSelectedRelease(filteredReleases[0]);
     }
   }, [filteredReleases]);
-
-  console.log({
-    selectedRelease,
-    filteredReleases,
-  });
 
   return (
     <div className="min-h-[calc(100vh-6rem)] bg-black text-white w-full">

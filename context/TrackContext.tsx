@@ -12,7 +12,7 @@ export const TrackContext = createContext<TrackContextType>({
   setCurrentTrackId: () => {},
 });
 
-export const TrackProvider = ({ children }: { children: React.ReactNode }) => {
+const TrackProvider = ({ children }: { children: React.ReactNode }) => {
   const [currentTrackId, setCurrentTrackId] = useState<string | null>(null);
 
   return (
@@ -27,3 +27,5 @@ export const TrackProvider = ({ children }: { children: React.ReactNode }) => {
     </TrackContext.Provider>
   );
 };
+
+export default TrackProvider;

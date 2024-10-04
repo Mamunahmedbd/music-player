@@ -1,4 +1,3 @@
-"use client";
 import React, {
   useRef,
   useMemo,
@@ -54,8 +53,8 @@ const Player = ({
   // Refs for DOM elements and WebAudio contexts
   const containerRef = useRef<HTMLDivElement | null>(null);
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
-  const gradientRef = useRef(null);
-  const progressRef = useRef(null);
+  const gradientRef = useRef<CanvasGradient | null>(null);
+  const progressRef = useRef<CanvasGradient | null>(null);
 
   // Player state management
   const [urlIndex, setUrlIndex] = useState(0); // Currently selected track index
@@ -131,6 +130,7 @@ const Player = ({
       progress.addColorStop(0, "rgb(255, 185, 0)");
       progress.addColorStop(0.7, "rgb(255, 120, 0)");
       progress.addColorStop(1, "rgb(255, 40, 0)");
+
       progressRef.current = progress;
     }
   }, []);

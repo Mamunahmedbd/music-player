@@ -1,7 +1,12 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import { TrackProvider } from "@/context/TrackContext";
+import dynamic from "next/dynamic";
+
+const TrackProvider = dynamic(() => import("@/context/TrackContext"), {
+  ssr: false,
+});
+// import TrackProvider from "@/context/TrackContext";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
