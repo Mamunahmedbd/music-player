@@ -21,6 +21,7 @@ const ReleaseDetail = ({ release }: Props) => {
           <li
             key={track.trackId}
             onClick={() => setCurrentTrackId(track.trackId)}
+            className="p-2 shadow-md cursor-pointer hover:border-2 hover:border-gray-500"
           >
             {track.title} - {track.duration}
           </li>

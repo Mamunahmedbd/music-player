@@ -1,4 +1,5 @@
 "use client";
+import Player from "@/components/Player";
 import React, { createContext, useState } from "react";
 
 type TrackContextType = {
@@ -17,6 +18,12 @@ export const TrackProvider = ({ children }: { children: React.ReactNode }) => {
   return (
     <TrackContext.Provider value={{ currentTrackId, setCurrentTrackId }}>
       {children}
+      <Player
+        onToggleView={() => {}}
+        isMinimized={false}
+        onSetIsMinimized={() => {}}
+        onToggleVideoPlayer={() => {}}
+      />
     </TrackContext.Provider>
   );
 };

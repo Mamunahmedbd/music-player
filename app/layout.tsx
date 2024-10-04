@@ -30,6 +30,12 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <TrackProvider>{children}</TrackProvider>
+        {/* <Player
+        onToggleView={() => {}}
+        isMinimized={false}
+        onSetIsMinimized={() => {}}
+        onToggleVideoPlayer={() => {}}
+      /> */}
       </body>
     </html>
   );

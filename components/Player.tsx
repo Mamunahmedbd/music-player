@@ -135,8 +135,6 @@ const Player = ({
     }
   }, []);
 
-  console.log({ music: audioUrls[urlIndex].audioSrc });
-
   // WaveSurfer initialization and setup
   const { wavesurfer } = useWavesurfer({
     container: containerRef,
@@ -215,9 +213,9 @@ const Player = ({
   }, [wavesurfer, isPlaying]);
 
   // Volume control
-  const onChangeVolume = (e) => {
-    setVolume(e.target.value);
-    wavesurfer?.setVolume(e.target.value);
+  const onChangeVolume = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setVolume(parseInt(e.target.value));
+    wavesurfer?.setVolume(parseInt(e.target.value));
   };
 
   // Adjust player size based on minimization
@@ -248,7 +246,7 @@ const Player = ({
         isTablet && !isMinimized ? "flex-col" : "flex-row"
       } items-center justify-between pl-1 pr-1 text-white`}
     >
-      <div className="flex items-center gap-2 pr-2">
+      <div className="flex items-center gap-2 pr-2 px-4">
         {/* Play/Pause button for minimized state */}
         {!isPlaying && isMinimized ? (
           <button

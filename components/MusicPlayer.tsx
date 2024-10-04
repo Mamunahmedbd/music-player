@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import whiteLogo from "@/assets/demo-logo.webp";
+import whiteLogo from "@/assets/logo.png";
 import { IoReturnUpBackSharp } from "react-icons/io5";
 import Link from "next/link";
 import Image from "next/image";
@@ -39,7 +39,7 @@ const MusicPlayer = () => {
   });
 
   return (
-    <div className="min-h-screen bg-black text-white w-full">
+    <div className="min-h-[calc(100vh-6rem)] bg-black text-white w-full">
       {/* Header and Search Bar */}
       <div className="flex items-center px-4 w-full border-b border-gray-800">
         <Link href="/home" className="hover:text-gray-100 hover:opacity-50">
@@ -47,9 +47,9 @@ const MusicPlayer = () => {
             <Image
               src={whiteLogo}
               alt="Logo"
-              className="h-10 mr-2"
-              width={30}
-              height={10}
+              className="w-40 mr-2"
+              width={0}
+              height={0}
             />
             <IoReturnUpBackSharp className="text-4xl" />
           </div>

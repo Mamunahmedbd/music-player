@@ -19,9 +19,10 @@ const ReleaseGrid = ({ releases, onSelectRelease }: IProps) => {
           <Image
             src={release.thumbnail}
             alt={release.title}
-            className="w-40 h-40 object-cover rounded-md"
-            width={40}
-            height={40}
+            className="w-40 h-40 object-contain rounded-md"
+            width={0}
+            height={0}
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
           <p className="text-white mt-2 text-center">{release.title}</p>
         </div>
